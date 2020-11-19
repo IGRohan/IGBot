@@ -1,0 +1,37 @@
+{
+  "name": "testbot",
+  "version": "1.0.0",
+  "description": "This is a testbot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "IGRohan",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "@k3rn31p4nic/google-translate-api": "^1.1.1",
+    "blague.xyz": "^2.0.4",
+    "canvacord": "^5.0.7",
+    "discord-backup": "^2.2.5",
+    "discord-simple-paginationembed": "0.0.1",
+    "discord.js": "^12.4.1",
+    "distube": "^2.7.0",
+    "dotenv": "^8.2.0",
+    "ffmpeg-static": "^4.2.7",
+    "figlet": "^1.5.0",
+    "mathjs": "^8.0.1",
+    "merge-options": "^3.0.3",
+    "moment": "^2.29.0",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.10.9",
+    "ms": "^2.1.2",
+    "node-fetch": "^2.6.1",
+    "parse-ms": "^2.1.0",
+    "quick.db": "^7.0.0-b21",
+    "random-puppy": "^1.1.0",
+    "simple-youtube-api": "^5.2.1",
+    "uninstall": "0.0.0",
+    "weather-js": "^2.0.0"
+  }
+}
