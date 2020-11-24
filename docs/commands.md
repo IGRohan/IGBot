@@ -4,57 +4,53 @@ Here's the list of IGBot commands. This bot contains more than **xx commands** i
 #### Contents of the table  
 **Name**: The name of the command  
 **Description**: A brief explanation of the purpose of the command  
-**Usage**: The arguments/options that the command takes in parameters  
+**Usage**: The arguments/options that the command takes in parameters 
 
-### General (22 commands)
+### Administration (18 commands)
+
+| Name                | Description                                     | Usage                            |    
+| ------------------- | ----------------------------------------------- | -------------------------------- | 
+| **addcommand**      | Add a custom command!                           | addcommand [name] [answer]       |  
+| **addemoji**        | Add an emoji to the server!                     | addemoji [image-url] [name]      |   
+| **automod**         | Toggle Discord invites automatic deletion       | automod [on/off] (#channel)      |   
+| **autorole**        | Toggle autorole on the server!                  | autorole [on/off] (role)         |   
+| **backup**          | Manage your server backups in an efficient way! | backup [create/load/remove]      |   
+| **configuration**   | Shows the server configuration!                 | configuration                    |   
+| **delcommand**      | Remove a custom command!                        | delcommand [name-of-the-command] |   
+| **deletemod**       | Toggle moderation commands auto deletion!       | deletemod [on/off]               |   
+| **goodbye**         | Toggle goodbye messages!                        | goodbye                          |   
+| **ignore**          | Toggle commands in a channel                    | ignore [channel]                 |   
+| **setfortniteshop** | Set the daily Fortnite shop channel!            | setfortniteshop (#channel)       |   
+| **setlang**         | Change the server language!                     | setlang [language]               |   
+| **setmodlogs**      | Set the moderation logs channel!                | setmodlogs (#channel)            |   
+| **setprefix**       | Set the server prefix!                          | setprefix [prefix]               |   
+| **setreports**      | Set the reports channel!                        | setreports (#channel)            |   
+| **setsuggests**     | Set the suggestions channel!                    | setsuggests (#channel)           |   
+| **slowmode**        | Set a channel                           | slowmode [#channel] (time)       |   |
+| **setwelcome**      | Set the welcome channel!                        | welcome                          |   
+
+### Utility (22 commands)
 
 | Name            | Description                                                       | Usage                          |   
 | --------------- | ----------------------------------------------------------------- | ------------------------------ | 
-| **calc**        | Calculator able to solve complex operations and to convert units! | calc [calculation]             |  
-| **fortnite**    | Shows a player's Fortnite stats!                                  | fortnite [psn/xbl/pc] [pseudo] | 
-| **github**      | Shows Atlanta's Github repository information!                    | github                         | 
-| **hastebin**    | Upload your text on hastebin!                                     | hastebin [text]                |  
+| **calculator**  | Calculator able to solve complex operations and to convert units! | calc [calculation]             |  
 | **help**        | Show commands list or specific command help.                      | help (command)                 | 
 | **invitations** | Shows the number of people you have invited to the server!        | invitations (@member)          |  
-| **invite**      | Shows Atlanta links!                                              | invite (copy)                  | 
-| **minecraft**   | Shows information about a Minecraft server!                       | minecraft [ip]                 |  
-| **permissions** | Displays the member's permissions in the channel                  | permissions (@member)          |  
 | **ping**        | Show bot's ping                                                   | ping                           |  
 | **quote**       | Quote a message in the channel!                                   | quote [messageID] [channel]    |  
-| **remindme**    | Add a new personal reminder                                       | remindme [message]             |  
-| **report**      | Send your report to the channel defined for them!                 | report [@user] [reason]        |  
-| **serverinfo**  | Shows information about the server!                               | serverinfo [ID/Name]           |  
+| **channelinfo** | Shows information about the mentioned channel!                    | channelinfo [channel]          |  
+| **userinfo**    | Shows information about the mentioned member!                     | userinfo [@user]               |  
+| **serverinfo**  | Shows information about the server!                               | serverinfo                     |  
 | **setafk**      | Become AFK (members who mention you will receive a message)       | setafk [reason]                |  
 | **shorturl**    | Make your links shorter!                                          | shorturl [url]                 |  
 | **someone**     | Pick a random member on the server!                               | someone                        |  
 | **staff**       | Shows the server staff members list!                              | staff                          |  
-| **stats**       | Shows the bot stats!                                              | stats                          |  
+| **botstats**    | Shows the bot stats!                                              | botstats                       |  
 | **suggest**     | Send your suggestion to the defined channel!                      | suggest [message]              |  
 | **translate**   | Translate your text!                                              | translate [language] [message] |  
 | **userinfo**    | Shows user information!                                           | userinfo (@user/userID)        |  
 
-### Administration (18 commands)
 
-| Name                | Description                                     | Usage                            |    |
-| ------------------- | ----------------------------------------------- | -------------------------------- | ---------- |
-| **addcommand**      | Add a custom command!                           | addcommand [name] [answer]       |   |
-| **addemoji**        | Add an emoji to the server!                     | addemoji [image-url] [name]      |   |
-| **automod**         | Toggle Discord invites automatic deletion       | automod [on/off] (#channel)      |   |
-| **autorole**        | Toggle autorole on the server!                  | autorole [on/off] (role)         |   |
-| **backup**          | Manage your server backups in an efficient way! | backup [create/load/infos]       |  |
-| **configuration**   | Shows the server configuration!                 | configuration                    |   |
-| **delcommand**      | Remove a custom command!                        | delcommand [name-of-the-command] |   |
-| **deletemod**       | Toggle moderation commands auto deletion!       | deletemod [on/off]               |   |
-| **goodbye**         | Toggle goodbye messages!                        | goodbye                          |   |
-| **ignore**          | Toggle commands in a channel                    | ignore [channel]                 |   |
-| **setfortniteshop** | Set the daily Fortnite shop channel!            | setfortniteshop (#channel)       |   |
-| **setlang**         | Change the server language!                     | setlang [language]               |   |
-| **setmodlogs**      | Set the moderation logs channel!                | setmodlogs (#channel)            |   |
-| **setprefix**       | Set the server prefix!                          | setprefix [prefix]               |   |
-| **setreports**      | Set the reports channel!                        | setreports (#channel)            |   |
-| **setsuggests**     | Set the suggestions channel!                    | setsuggests (#channel)           |   |
-| **slowmode**        | Set a channel                           | slowmode [#channel] (time)       |   |
-| **welcome**         | Toggle welcome messages!                        | welcome                          |   |
 
 ### Images (17 commands)
 

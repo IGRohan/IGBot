@@ -1,6 +1,6 @@
 ## Before You Begin
 
-1. Make sure you have installed [Node.js](https://nodejs.org/en/) v10 or higher, [Git](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) and [MongoDB](./tutorials/mongodb/index).
+1. Make sure you have installed [Node.js](https://nodejs.org/en/) v14 or higher, [Git](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) and [MongoDB](./tutorials/mongodb/index).
 2. Clone this repository with `git clone https://github.com/IGRohan/IGBot.git`.
 3. Run `cd IGBot` to move in the folder that Git has just created.
 
@@ -42,5 +42,3 @@ You May change them according to your needs!
 1. Run `node index.js`
 2. Enjoy!
 
-### Credits 
-I Used Some Amazing NPM Packages to make some of the commands in this Bot. Here are all of these down below - 

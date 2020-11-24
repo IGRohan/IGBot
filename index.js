@@ -3,10 +3,10 @@ require("dotenv").config();
 const client = new Discord.Client();
 const mongoose = require("mongoose");
 const ytdl = require("ytdl-core");
-// const queue = new Map()
+const db = require('quick.db')
 const Distube = require("distube");
 const config = require('./config/config.json')
-
+const welcome = require('./events & functions/welcome')
 
 
 const fs = require("fs");
@@ -62,6 +62,8 @@ client.once("ready", () => {
       useUnifiedTopology: true,
     })
     .then(console.log("Connected to IGBot Database"));
+
+  welcome(client)
 });
 
 //Message Event
@@ -83,6 +85,8 @@ client.on("message", async (message) => {
   if (message.content.startsWith(`${prefix}check`)) {
     message.react("✅");
   }
+  
+
 
   
   //Commands Execution Ends Here
@@ -95,6 +99,7 @@ client.on("message", async (message) => {
       name: `${prefix}help`,
     },
   });
+  
 
 });
 

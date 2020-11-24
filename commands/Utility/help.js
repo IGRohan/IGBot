@@ -14,11 +14,11 @@ module.exports = {
                 .setTitle('IGBot Commands')
                 //.setDescription(`${client.commands.map(c => c.name).join("\n  ")}`)
                 .addField(':ninja: Moderation/Admin', "`kick`, `mute`, `unmute`, `ban`, `unban`,`forceban`, `clear`, `addrole`, `warn` ,\
-`warnings`, `backup`, `ctopic`, `lockchannel`, `unlockchannel` ")
+`warnings`, `backup`, `ctopic`, `lockchannel`, `unlockchannel`, `setwelcome`, `disablewelcome` ")
                 .addField(':first_place: Fun', "`ascii`, `joke`, `fml`, `meme`, `triggered`, `changemymind`, `kiss`, `slap`, `shit`,\
 `advice`,`wouldyourather`, `compliment`")
-                .addField(':tools: Utility', "`help`, `weather`, `serverinfo`, `userinfo`, `channelinfo`, `botstats`, `ping`, `invites`,\
-`morse`,`avatar`, `bmi`, `translate`, `calculator`")
+                .addField(':tools: Utility', "`help`, `config`, `weather`, `serverinfo`, `userinfo`, `channelinfo`, `botstats`, `ping`,\
+ `invites`, `morse`,`avatar`, `bmi`, `translate`, `calculator`")
                 .addField(':money_with_wings: Economy', "`balance`, `daily`, `work`, `leaderboard`, `pay`, `deposit`, `withdraw`, `rob`,\
 ")
                 .addField(':man_detective: Owner', "`botinfo`")

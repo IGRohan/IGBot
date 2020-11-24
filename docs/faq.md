@@ -12,7 +12,7 @@ It simply means that Git is not properly installed on your machine. Many tutoria
 
 ### Can I host the bot on Glitch?
 
-No you can't. MongoDB is not available on Glitch.
+Yes you can, only if you make a MongoDB cluster through the [Method posted here](./tutorials/mongodb/index)
 
 ### Can I host the bot on Heroku?
 
@@ -28,9 +28,9 @@ Good luck!
 
 ### Why don't the welcome messages get sent? 
 
-You can configure welcome messages with `*welcome` and goodbye messages with `*goodbye`. 
+You can configure welcome messages with `*setwelcome` and goodbye messages with `*setgoodbye`. 
 If the welcome and/or goodbye messages don't get sent, type `*conf` to see your server configuration.
-Check that Atlanta has the permissions to send messages (and images if you have them enabled). If all this is done and the message still doesn't get sent, contact support!
+Check that IGBot has the permissions to send messages (and images if you have them enabled) in the channel that you have set as welcome channel. If all this is done and the message still doesn't get sent, [contact support](./contact/index)!
 
 ### How does auto-moderation work?
 
@@ -42,4 +42,5 @@ If you have a salon dedicated to advertising, you have the possibility to disabl
 Check that the bot has the permissions to send messages and try again.  
 If it still doesn't work, it's a bug, join the [support server](https://discord.atlanta-bot.fr)!  
 
-## Any more questions? Join the [support server](https://discord.atlanta-bot.fr)!
+## Any more questions? 
+Join the [support server](https://discord.gg/NKQbh2sJ8W)!
