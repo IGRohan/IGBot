@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 require("dotenv").config();
 const client = new Discord.Client();
 const mongoose = require("mongoose");
-const ytdl = require("ytdl-core");
 const db = require('quick.db')
 const Distube = require("distube");
 const config = require('./config/config.json')
@@ -81,13 +80,17 @@ client.on("message", async (message) => {
     client.commands.get(command) ||
     client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(command));
   if (cmd) cmd.run(client, message, args);
+  let customCommands = db.get(`guildConfigurations_${message.guild.id}.commands`)
+  if(customCommands) {
+    let customCommandsName = customCommands.find(x => x.name === command)
+    if(customCommandsName) return message.channel.send(customCommandsName.response)
+  }
 
   if (message.content.startsWith(`${prefix}check`)) {
     message.react("✅");
   }
+ 
   
-
-
   
   //Commands Execution Ends Here
 

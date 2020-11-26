@@ -7,7 +7,7 @@ module.exports = {
     usage: "?disablewelcome",
     alises: [],
     run: async(client, message, args) => {
-        if(message.member.hasPermission('ADMINISTRATOR')) {
+        if(!message.member.hasPermission('ADMINISTRATOR')) {
             if(!message.author.id === message.guild.ownerID){
                 const disablewelcomeError = new MessageEmbed()
                 .setDescription(`You don\'t have permissions to set welcome channel`)

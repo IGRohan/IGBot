@@ -7,7 +7,7 @@ module.exports = {
     usage: "?setwelcome <#channel>",
     aliases: [],
     run: async(client, message, args) => {
-        if(message.member.hasPermission('ADMINISTRATOR')) {
+        if(!message.member.hasPermission('ADMINISTRATOR')) {
             if(!message.author.id === message.guild.ownerID){
                 const setwelcomeError = new MessageEmbed()
                 .setDescription(`You don\'t have permissions to set welcome channel`)

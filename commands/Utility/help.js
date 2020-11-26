@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js")
+const db = require('quick.db')
 
 
 module.exports = {
@@ -8,15 +9,17 @@ module.exports = {
     run: async(client, message, args) => {
         const name = args[0]
         const command = client.commands.get(name) || client.commands.find(c => c.aliases && c.aliases.includes(name))
+        let database = db.get(`guildConfigurations_${message.guild.id}.commands`)
 
         if (!command) {
             const embed = new MessageEmbed()
                 .setTitle('IGBot Commands')
                 //.setDescription(`${client.commands.map(c => c.name).join("\n  ")}`)
                 .addField(':ninja: Moderation/Admin', "`kick`, `mute`, `unmute`, `ban`, `unban`,`forceban`, `clear`, `addrole`, `warn` ,\
-`warnings`, `backup`, `ctopic`, `lockchannel`, `unlockchannel`, `setwelcome`, `disablewelcome` ")
-                .addField(':first_place: Fun', "`ascii`, `joke`, `fml`, `meme`, `triggered`, `changemymind`, `kiss`, `slap`, `shit`,\
-`advice`,`wouldyourather`, `compliment`")
+`warnings`, `backup`, `ctopic`, `lockchannel`, `unlockchannel`, `setwelcome`, `disablewelcome`, `slowmode`, `addcommand`, \
+`deletecommand`,  ")
+                .addField(':first_place: Fun', "`ascii`, `joke`, `fml`, `meme`, `advice`,`wouldyourather`, `compliment`, `8ball`")
+                .addField('Images', "`triggered`, `changemymind`, `kiss`, `slap`, `shit`, `wallpaper`" )
                 .addField(':tools: Utility', "`help`, `config`, `weather`, `serverinfo`, `userinfo`, `channelinfo`, `botstats`, `ping`,\
  `invites`, `morse`,`avatar`, `bmi`, `translate`, `calculator`")
                 .addField(':money_with_wings: Economy', "`balance`, `daily`, `work`, `leaderboard`, `pay`, `deposit`, `withdraw`, `rob`,\
@@ -26,8 +29,17 @@ module.exports = {
 `autoplay`, `filter` ")
                 .setColor('BLUE')
                 .setFooter(`Use ?help <command> to get more info about it!`)
-                
+            
 
+            if(database) {
+                let array = []
+                database.forEach(m => {
+                    array.push('`' + m.name + '`')
+                })
+                if(array.length > 0) {
+                    embed.addField(`Custom Commands`, array.join(', '))
+                }      
+            }
             return message.channel.send(embed)
 
         }

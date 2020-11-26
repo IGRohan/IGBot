@@ -6,7 +6,7 @@ Here's the list of IGBot commands. This bot contains more than **xx commands** i
 **Description**: A brief explanation of the purpose of the command  
 **Usage**: The arguments/options that the command takes in parameters 
 
-### Administration (18 commands)
+## Administration (18 commands)
 
 | Name                | Description                                     | Usage                            |    
 | ------------------- | ----------------------------------------------- | -------------------------------- | 
@@ -16,9 +16,7 @@ Here's the list of IGBot commands. This bot contains more than **xx commands** i
 | **autorole**        | Toggle autorole on the server!                  | autorole [on/off] (role)         |   
 | **backup**          | Manage your server backups in an efficient way! | backup [create/load/remove]      |   
 | **configuration**   | Shows the server configuration!                 | configuration                    |   
-| **delcommand**      | Remove a custom command!                        | delcommand [name-of-the-command] |   
-| **deletemod**       | Toggle moderation commands auto deletion!       | deletemod [on/off]               |   
-| **goodbye**         | Toggle goodbye messages!                        | goodbye                          |   
+| **deletecommand**   | Remove a custom command!                        | delcommand [name-of-the-command] |        
 | **ignore**          | Toggle commands in a channel                    | ignore [channel]                 |   
 | **setfortniteshop** | Set the daily Fortnite shop channel!            | setfortniteshop (#channel)       |   
 | **setlang**         | Change the server language!                     | setlang [language]               |   
@@ -26,10 +24,12 @@ Here's the list of IGBot commands. This bot contains more than **xx commands** i
 | **setprefix**       | Set the server prefix!                          | setprefix [prefix]               |   
 | **setreports**      | Set the reports channel!                        | setreports (#channel)            |   
 | **setsuggests**     | Set the suggestions channel!                    | setsuggests (#channel)           |   
-| **slowmode**        | Set a channel                           | slowmode [#channel] (time)       |   |
-| **setwelcome**      | Set the welcome channel!                        | welcome                          |   
+| **slowmode**        | Set the channel slowmode!                       | slowmode (time)                  |
+| **setwelcome**      | Set the welcome channel!                        | welcome (#channel)               | 
+| **disablewelcome**  | Disable welcome channel plugin                  | disablewelcome                   | 
+| **goodbye**         | Toggle goodbye messages!                        | goodbye                          |   
 
-### Utility (22 commands)
+## Utility (22 commands)
 
 | Name            | Description                                                       | Usage                          |   
 | --------------- | ----------------------------------------------------------------- | ------------------------------ | 
@@ -40,19 +40,18 @@ Here's the list of IGBot commands. This bot contains more than **xx commands** i
 | **quote**       | Quote a message in the channel!                                   | quote [messageID] [channel]    |  
 | **channelinfo** | Shows information about the mentioned channel!                    | channelinfo [channel]          |  
 | **userinfo**    | Shows information about the mentioned member!                     | userinfo [@user]               |  
-| **serverinfo**  | Shows information about the server!                               | serverinfo                     |  
+| **serverinfo**  | Shows information about the server!                               | serverinfo                     | 
+| **botstats**    | Shows the bot stats!                                              | botstats                       |   
 | **setafk**      | Become AFK (members who mention you will receive a message)       | setafk [reason]                |  
 | **shorturl**    | Make your links shorter!                                          | shorturl [url]                 |  
 | **someone**     | Pick a random member on the server!                               | someone                        |  
 | **staff**       | Shows the server staff members list!                              | staff                          |  
-| **botstats**    | Shows the bot stats!                                              | botstats                       |  
 | **suggest**     | Send your suggestion to the defined channel!                      | suggest [message]              |  
 | **translate**   | Translate your text!                                              | translate [language] [message] |  
-| **userinfo**    | Shows user information!                                           | userinfo (@user/userID)        |  
 
 
 
-### Images (17 commands)
+## Images (17 commands)
 
 | Name              | Description                                             | Usage                               |   |
 | ----------------- | ------------------------------------------------------- | ----------------------------------- | --------- |
@@ -74,21 +73,21 @@ Here's the list of IGBot commands. This bot contains more than **xx commands** i
 | **wanted**        | Generates a "wanted" image using Nekobot API            | wanted (@member)                    |  |
 | **wasted**        | Generates a "wasted" image using Nekobot API            | wasted (@member)                    |  |
 
-### Economy (15 commands)
+## Economy (15 commands)
 
-| Name             | Description                                                         | Usage                            |    |
-| ---------------- | ------------------------------------------------------------------- | -------------------------------- | ---------- |
-| **deposit**      | Deposit your money in the bank                                      | deposit [amount]                 |   |
-| **leaderboard**  | Shows users who have the most credits                               | leaderboard                      |   |
-| **balance**      | Shows your credits                                                  | money (@member)                  |   |
-| **pay**          | Send money to someone!                                              | pay [amount] [@member]           |  |
-| **rob**          | Try to rob a member!                                                | rob [@member] [amount]           |   |
-| **setbio**       | Change your biography!                                              | setbio [biography]               |   |
-| **slots**        | The Atlanta casino                                                  | slots [amount]                   |   |
-| **withdraw**     | Withdraw money!                                                     | withdraw [amount]                |   |
-| **work**         | Claim your salary!                                                  | work                             |   |
+| Name             | Description                                                         | Usage                            |    
+| ---------------- | ------------------------------------------------------------------- | -------------------------------- | 
+| **deposit**      | Deposit your money in the bank                                      | deposit [amount OR all]          |   
+| **leaderboard**  | Shows users who have the most bank balance                          | leaderboard                      |   
+| **balance**      | Shows your cash & bank balance                                      | money (@member)                  |   
+| **pay**          | Send money to someone!                                              | pay [amount] [@member]           | 
+| **rob**          | Try to rob a member!                                                | rob [@member]                    |   
+| **setbio**       | Change your biography!                                              | setbio [biography]               |   
+| **slots**        | The Atlanta casino                                                  | slots [amount]                   |   
+| **withdraw**     | Withdraw money!                                                     | withdraw [amount]                |   
+| **work**         | Claim your salary!                                                  | work                             |   
 
-### Moderation (14 commands)
+## Moderation (14 commands)
 
 | Name                | Description                                                                                               | Usage                                                              |   |
 | ------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------- |
@@ -123,22 +122,22 @@ Here's the list of IGBot commands. This bot contains more than **xx commands** i
 *This is a fun command, not to be taken seriously* | lovecalc [@member1] (@member2)  |  |
 | **number**    | Find the right number!                                                                        | number                          |  |
 
-### Music (10 commands)
+## Music (10 commands)
 
-| Name        | Description                                       | Usage              |   |
-| ----------- | ------------------------------------------------- | ------------------ | --------- |
-| **filter**  | Enable or disable a filter!                       | filter [filter]    |  |
-| **filters** | Send the list of all the filters and their status | filters            |  |
-| **lyrics**  | Shows the song lyrics                             | lyrics [song-name] |  |
-| **np**      | Shows information about the current song!         | np                 |  |
-| **pause**   | Pause the current song!                           | pause              |  |
-| **play**    | Plays music for you!                              | play [song]        |  |
-| **queue**   | Shows the server queue                            | queue              |  |
-| **resume**  | Resume the current song!                          | resume             |  |
-| **skip**    | Skip the current song                             | skip               |  |
-| **stop**    | Stop the music                                    | stop               |  |
+| Name        | Description                                       | Usage              |   
+| ----------- | ------------------------------------------------- | ------------------ | 
+| **filter**  | Enable or disable a filter!                       | filter [filter]    |  
+| **filters** | Send the list of all the filters and their status | filters            |  
+| **lyrics**  | Shows the song lyrics                             | lyrics [song-name] |  
+| **np**      | Shows information about the current song!         | np                 |  
+| **pause**   | Pause the current song!                           | pause              |  
+| **play**    | Plays music for you!                              | play [song]        |  
+| **queue**   | Shows the server queue                            | queue              | 
+| **resume**  | Resume the current song!                          | resume             |  
+| **skip**    | Skip the current song                             | skip               |  
+| **stop**    | Stop the music                                    | stop               |  
 
-### Owner (3 commands)
+## Owner (3 commands)
 
 | Name             | Description             | Usage        |   |
 | ---------------- | ----------------------- | ------------ | --------- |

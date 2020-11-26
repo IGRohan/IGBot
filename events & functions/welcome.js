@@ -9,6 +9,8 @@ module.exports = (client) => {
         if(channelId === null) return;
         if(guildConfig === null) guildConfig = 'disabled'
         if(guildConfig === 'disabled') return;
+        
+
         const text = `Welcome to ${member.guild.name} Server <@${member.id}>`
         const channel = member.guild.channels.cache.get(channelId)
         channel.send(text)
