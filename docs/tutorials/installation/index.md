@@ -9,7 +9,7 @@
 You need to clone the `.env.example` file and to rename it to `.env`. You will then have to complete it with your informations.
 The `.env.example` file will look something like this - 
 
-```
+```json
 {
     token= ""
     prefix= "?"
@@ -41,4 +41,6 @@ You May change them according to your needs!
 
 1. Run `node index.js`
 2. Enjoy!
+
+
 
