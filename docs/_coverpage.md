@@ -1,4 +1,4 @@
-![logo](https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/docsify-darklight-theme-logo.png)
+<img src='./images/game-controller.png' width='256' height='256'>
 
 # IGBot
 
