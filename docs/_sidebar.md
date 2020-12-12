@@ -5,7 +5,7 @@
 * [Tutorials](./tutorials/index)
   * [Installation](./tutorials/installation/index)
   * [MongoDB](./tutorials/mongodb/index)
-  * [Java](./tutorials/java/index)
+  * [Under Construction](./tutorials/java/index)
 * [FAQ](./faq.md)
 * [About](./about/index)
 * [Contact](./contact/index)
