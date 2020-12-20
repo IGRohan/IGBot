@@ -15,6 +15,7 @@ Make sure you add a star ⭐ to the repository to promote the project!
 
 * ⚙️ Guild configuration (welcome channels, prefix etc.....)
 * 😀 Easy to use commands and a very helpful help command.
+* 👋 Welcome Messages with Images!
 
 ### Commands
 IGbot has a lot of commands, in **5** categories!
