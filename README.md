@@ -35,6 +35,7 @@ If you don't want to edit the code of the bot, a permanent online version will b
 ### Self-Hosting
 You Can get a guide on how to self host this [here](https://igrohan.github.io/IGBot/#/./tutorials/installation/index)
 
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=IGRohan&repo=IGBot)](https://github.com/IGRohan)
 
 
 
