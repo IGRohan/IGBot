@@ -6,6 +6,10 @@
   "scripts": {
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IGRohan/IGbot.git"
+  },
   "author": "IGRohan",
   "license": "ISC",
   "dependencies": {
@@ -14,6 +18,7 @@
     "blague.xyz": "^2.0.4",
     "canvacord": "^5.0.7",
     "discord-backup": "^2.2.5",
+    "discord-canvas": "^1.4.1",
     "discord-simple-paginationembed": "0.0.1",
     "discord.js": "^12.4.1",
     "distube": "^2.7.0",
@@ -31,6 +36,7 @@
     "quick.db": "^7.0.0-b21",
     "random-puppy": "^1.1.0",
     "simple-youtube-api": "^5.2.1",
+    "tinyurl": "^1.1.7",
     "uninstall": "0.0.0",
     "weather-js": "^2.0.0"
   }

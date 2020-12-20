@@ -1,5 +1,7 @@
-const { Client } = require("discord.js")
+const { Client, MessageAttachment } = require("discord.js")
 const db = require('quick.db')
+const canvacord = require('canvacord')
+const Canva = require('discord-canvas')
 
 module.exports = (client) => {
     client.on('guildMemberAdd', (member) => {
@@ -9,10 +11,22 @@ module.exports = (client) => {
         if(channelId === null) return;
         if(guildConfig === null) guildConfig = 'disabled'
         if(guildConfig === 'disabled') return;
-        
 
+        const welcomeImage = new canvacord.Welcomer()
+            .setUsername(member.user.username)
+            .setMemberCount(member.guild.memberCount)
+            .setDiscriminator(member.user.discriminator)
+            .setAvatar(member.user.displayAvatarURL({dynamic: false, format: 'png'}))
+            .setGuildName(member.guild.name)
+            .setText('message', `Welcome to ${member.guild.name}`)
+        welcomeImage.build().then(data => {
+            const welcome = new MessageAttachment(data, 'Welcome.png')
+            channel.send(welcome)
+        })
+        
         const text = `Welcome to ${member.guild.name} Server <@${member.id}>`
         const channel = member.guild.channels.cache.get(channelId)
+        
         channel.send(text)
     })
 }
