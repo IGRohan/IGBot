@@ -60,8 +60,10 @@ client.on('ready', () => {
 
 //Message Event
 client.on('message', async message => {
+  const xp = require('./events&functions/xp')
   if (!message.guild) return;
   const prefix = process.env.prefix;
+  xp(message)
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -131,21 +133,6 @@ client.distube
       `${client.emotes.success} | Added \`${playlist.title}\` playlist (${playlist.total_items
       } songs) to queue\n${status(queue)}`
     )
-  )
-  // DisTubeOptions.searchSongs = true
-  .on("searchResult", (message, result) => {
-    let i = 0;
-    message.channel.send(
-      `**Choose an option from below**\n${result
-        .map(
-          (song) => `**${++i}**. ${song.name} - \`${song.formattedDuration}\``
-        )
-        .join("\n")}\n*Enter anything else or wait 60 seconds to cancel*`
-    );
-  })
-  // DisTubeOptions.searchSongs = true
-  .on("searchCancel", (message) =>
-    message.channel.send(`${client.emotes.error} | Searching canceled`)
   )
   .on("error", (message, err) =>
     message.channel.send(
