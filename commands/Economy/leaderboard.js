@@ -7,13 +7,15 @@ module.exports = {
     usage: "?leaderboard",
     aliases: ['level', 'levels'],
     run: async(client, message, args) => {
-        let money = db.startsWith(`bank_${message.guild.id}`, {sort: '.data'});
+        let money = db.all().filter(lb => lb.ID.startsWith(`bank_${message.guild.id}`)).sort((a, b) => b.data- a.data)
+        let bankBalance = money.slice(0, 10)
+        console.log(bankBalance)
         let content = "";
 
-        for(let i = 0; i < money.length; i++) {
-            let user = client.users.cache.get(money[i].ID.split('_')[2]).username
+        for(let i = 0; i < bankBalance.length; i++) {
+            let user = client.users.cache.get(bankBalance[i].ID.split('_')[2])
 
-            content += `${i+1}. ${user} - \$${money[i].data} \n`
+            content += `${i+1}. ${user} - \$${bankBalance[i].data} \n`
 
         }
 

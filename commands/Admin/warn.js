@@ -53,6 +53,7 @@ module.exports = {
       });
 
       await warnDoc.save().catch((err) => console.log(err));
+      return message.channel.send(`**Successfully Warned ${mentionedUser}**`)
     } else {
       if (warnDoc.warnings.length >= 3) {
         return message.channel.send(

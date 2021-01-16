@@ -13,10 +13,10 @@ module.exports = {
                 return message.channel.send(`You do not have permissions to add custom commands!`)
             }
         }
-
-        let commandName = args[0].toLowerCase()
-        if(!commandName) return message.channel.send(`You Need to provide a Command Name! \n\
+        if(!args[0]) return message.channel.send(`You Need to provide a Command Name! \n\
 \`addcommand <Command Name> <Command Response>\``)
+        let commandName = args[0].toLowerCase()
+        
         if(commandName.length > 15) return message.channel.send(`Command Name can only have less than/equal to 15 letters!`)
 
         let commandResponse = args.slice(1).join(" ")

@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js")
+const { MessageEmbed, MessageAttachment } = require("discord.js")
 const db = require('quick.db')
 
 
@@ -11,20 +11,21 @@ module.exports = {
         const command = client.commands.get(name) || client.commands.find(c => c.aliases && c.aliases.includes(name))
         let database = db.get(`guildConfigurations_${message.guild.id}.commands`)
 
+
         if (!command) {
             const embed = new MessageEmbed()
-                .setTitle('IGBot Commands')
+                .setAuthor('IGBot\'s Commands', message.author.displayAvatarURL({dynamic: true}))
                 //.setDescription(`${client.commands.map(c => c.name).join("\n  ")}`)
                 .addField(':ninja: Moderation/Admin', "`kick`, `mute`, `unmute`, `ban`, `unban`,`forceban`, `clear`, `addrole`, `warn` ,\
 `warnings`, `backup`, `ctopic`, `lockchannel`, `unlockchannel`, `setwelcome`, `disablewelcome`, `slowmode`, `addcommand`, \
 `deletecommand`,  ")
-                .addField(':first_place: Fun', "`ascii`, `joke`, `fml`, `meme`, `advice`,`wouldyourather`, `compliment`, `8ball`")
-                .addField('Images', "`triggered`, `changemymind`, `kiss`, `slap`, `shit`, `wallpaper`" )
+                .addField(`Fun`, "`ascii`, `joke`, `fml`, `meme`, `advice`,`wouldyourather`, `compliment`, `8ball`")
+                .addField('Images', "`triggered`, `changemymind`, `kiss`, `slap`, `shit`, `facepalm`" )
                 .addField(':tools: Utility', "`help`, `config`, `weather`, `serverinfo`, `userinfo`, `channelinfo`, `botstats`, `ping`,\
  `invites`, `morse`,`avatar`, `bmi`, `translate`, `calculator`")
                 .addField(':money_with_wings: Economy', "`balance`, `daily`, `work`, `leaderboard`, `pay`, `deposit`, `withdraw`, `rob`,\
 ")
-                .addField(':man_detective: Owner', "`botinfo`")
+                .addField(':man_detective: Owner', "`No Commands Yet`")
                 .addField(':headphones: Music', "`join`, `leave`, `play`, `stop`, `skip`, `volume`, `queue`, `pause`, `resume`, `loop`,\
 `autoplay`, `filter` ")
                 .setColor('BLUE')

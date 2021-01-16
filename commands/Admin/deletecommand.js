@@ -14,8 +14,8 @@ module.exports = {
             }
         }
 
+        if(!args[0]) return message.channel.send(`You Need to give a command to delete!\n\n\`deletecommand <Command Name>\``)
         let commandName = args[0].toLowerCase()
-        if(!commandName) return message.channel.send(`You Need to give a command to delete!\n\n\`deletecommand <Command Name>\``)
 
         let database = db.get(`guildConfigurations_${message.guild.id}.commands`)
         if(database) {

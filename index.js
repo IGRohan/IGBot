@@ -1,12 +1,10 @@
 const Discord = require("discord.js");
 require("dotenv").config();
 const client = new Discord.Client();
-const mongoose = require("mongoose");
-const db = require('quick.db')
 const Distube = require("distube");
 const config = require('./config/config.json')
-const welcome = require('./events & functions/welcome')
-
+const mongoose = require('mongoose')
+const db = require('quick.db')
 
 const fs = require("fs");
 
@@ -47,26 +45,21 @@ for (const file of commandFiles) {
   client.commands.set(command.name, command);
   console.log(`✅ Success! Loaded Command ${command.name} `);
 }
-
-// Ready Event
-
-
-const mongo_url = process.env.mongo_url;
-client.once("ready", () => {
+//Ready Event
+client.on('ready', () => {
+  const mongo_url = process.env.mongo_url;
   console.log("IGBot is online!");
 
-  mongoose
-    .connect(mongo_url, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
-    .then(console.log("Connected to IGBot Database"));
-
+  mongoose.connect(mongo_url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }).then(console.log("Connected to IGBot Database"));
+  const welcome = require('./events&functions/welcome')
   welcome(client)
-});
+})
 
 //Message Event
-client.on("message", async (message) => {
+client.on('message', async message => {
   if (!message.guild) return;
   const prefix = process.env.prefix;
   if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -75,36 +68,28 @@ client.on("message", async (message) => {
   const command = args.shift().toLowerCase();
   
 
+
   // if(!cmd) return;
   const cmd =
     client.commands.get(command) ||
     client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(command));
   if (cmd) cmd.run(client, message, args);
   let customCommands = db.get(`guildConfigurations_${message.guild.id}.commands`)
-  if(customCommands) {
+  if (customCommands) {
     let customCommandsName = customCommands.find(x => x.name === command)
-    if(customCommandsName) return message.channel.send(customCommandsName.response)
+    if (customCommandsName) return message.channel.send(customCommandsName.response)
   }
 
   if (message.content.startsWith(`${prefix}check`)) {
     message.react("✅");
   }
- 
-  
-  
-  //Commands Execution Ends Here
 
   //Setting Bot's Status
-  
-  client.user.setPresence({
-    activity: {
-      type: "WATCHING",
-      name: `${prefix}help`,
-    },
-  });
-  
-
-});
+  client.user.setActivity({
+    type: 'LISTENING',
+    name: `to ${prefix}help`
+  })
+})
 
 
 
@@ -167,6 +152,5 @@ client.distube
       `${client.emotes.error} | An error encountered: ${err}`
     )
   );
-
 
 client.login(process.env.token);
