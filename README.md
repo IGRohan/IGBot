@@ -31,7 +31,7 @@ IGbot has a lot of commands, in **5** categories!
 ## Installation
 
 ### Without Self-Hosting
-If you don't want to edit the code of the bot, a permanent online version will be available soon, which you can invite to your own Discord!
+I'm currently not planning to host this myself. But if anyone else wants to host this permanently, let me know!
 ### Self-Hosting
 You Can get a guide on how to self host this [here](https://igrohan.github.io/IGBot/#/./tutorials/installation/index)
 
