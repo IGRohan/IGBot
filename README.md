@@ -6,7 +6,7 @@
 [![](https://img.shields.io/badge/discord.js-v12.4.1-blue.svg?logo=npm)](https://discordjs.org)
 [![](https://img.shields.io/badge/patreon-donate-orange.svg)](https://patreon.com/igrohan)
 
-> This bot is under heavy development.
+> This bot is under heavy development. The Commands on the website/doc of this bot does not show the exact commands currently. Those are commands that are planned to be added. If you wanna know what commands are currently implemented, please use the help command in bot.
 
 IGBot is an open source Discord bot coded in JavaScript with [Discord.js](https://discord.js.org) by [IGRohan](https://github.com/IGRohan).
 Make sure you add a star ⭐ to the repository to promote the project!
